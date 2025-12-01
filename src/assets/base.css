@@ -59,9 +59,10 @@
 }
 
 body {
+  overflow-x: hidden;
   min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
+  color: #00DE64;
+  background: #2c2c2c;
   transition:
       color 0.5s,
       background-color 0.5s;
@@ -90,6 +91,16 @@ body {
 }
 .home-btn {
   font-size: 1.25em;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.phrase {
+  margin-bottom: 1em;
+  font-size: 2.5em;
+}
+.phrase-content {
+  font-size: 1.5em;
 }
 
 .top-menu {
@@ -112,13 +123,22 @@ body {
   display: flex;
   gap: 1em;
 }
+.container-card:hover .card:not(:hover) {
+  transform: scale(0.9);
+  opacity: 0.2;
+}
 .card {
+  transition: all 1s;
+  background: rgba(255, 255, 255, 0.05);
   padding: 2em 1em;
   width: 100%;
   max-height: 100vw;
   text-align: center;
-  border: #222222 solid 1px;
-  border-radius: 0.8em;
+  border: #222222 solid 5px;
+  border-radius: 2em;
+}
+.card:hover {
+  transform: scale(1.1);
 }
 .card-icon {
   height: 7em;
@@ -137,9 +157,11 @@ body {
 .creator-card-icon {
   width: 100px;
   height: 100px;
+  align-self: center;
   border-radius: 100px;
 }
 .creator-card-name {
+  margin-bottom: 0.5em;
   font-size: 1.3em;
   align-content: center;
 }
@@ -157,6 +179,21 @@ body {
 .work {
   width: 100%;
   height: 220px;
+}
+.creator-comment-container {
+  width: 100%;
+  padding: 0.5em;
+  font-style: italic;
+  border-radius: 0.8em 0.3em 0.3em 0.8em;
+  border-left: #222222 solid 5px;
+  background: rgba(0, 0, 0, 0.15);
+}
+.creator-comment-title {
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+}
+.creator-comment {
+  font-size: 1.1em;
 }
 
 @media (max-width: 768px) {

@@ -12,35 +12,38 @@ import CREATOR from "@/components/CREATOR.vue";
     <TopMenu/>
   </header>
 
-  <div class="relative-gap">
-    <div class="phrase">
-      あなたの表現に、新たな創造を。
+  <section class="main-form">
+    <div class="section-bg">
+      <div class="deco1"/>
+      <div class="deco2"/>
     </div>
-    <div class="phrase-content">
-      あなたの作品・あなたの声・あなたの世界観。<br>
-      AddCreart は、そのすべてに “もうひとつの価値” を加えるための、クリエイティブ・パートナーです。
+    <div class="relative-gap">
+      <div class="phrase">
+        あなたの表現に、新たな創造を。
+      </div>
+      <div class="phrase-content">
+        あなたの作品・あなたの声・あなたの世界観。<br>
+        AddCreart は、そのすべてに “もうひとつの価値” を加えるための、クリエイティブ・パートナーです。
+      </div>
     </div>
-  </div>
+  </section>
 
+  <section class="about">
+    <div class="section-bg"/>
   <ABOUT id="ABOUT"/>
-  <div style="margin-bottom: 5em"/>
+  </section>
+
+  <section class="service">
+    <div class="section-bg"/>
   <SERVICE id="SERVICE"/>
-  <div style="margin-bottom: 5em"/>
+  </section>
+
+  <section class="creator">
+    <div class="section-bg"/>
   <CREATOR id="CREATOR"/>
+  </section>
 </template>
 
 <style scoped>
-  .home-btn {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
 
-  .phrase {
-    margin-bottom: 1em;
-    font-size: 2.5em;
-  }
-  .phrase-content {
-    font-size: 1.5em;
-  }
 </style>

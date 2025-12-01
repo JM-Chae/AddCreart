@@ -13,6 +13,7 @@
           <img alt="icon" class="creator-card-icon" src="../img/tsubasa_icon.jpg"/>
           <div class="creator-card-name">tsubasa.add AddCreart Lab.代表</div>
         </div>
+
         <div class="creator-works-title">WORKS</div>
         <div class="creator-works-container">
           <div class="work-container">
@@ -69,6 +70,7 @@
           <img alt="icon" class="creator-card-icon" src="../img/yukimimochi_icon.jpg"/>
           <div class="creator-card-name">ゆきみもっち</div>
         </div>
+
         <div class="creator-works-title">WORKS</div>
         <div class="creator-works-container">
           <div class="work-container">
@@ -85,8 +87,23 @@
           </div>
         </div>
       </div>
+
+      <div style="margin-bottom: 5em"></div>
+
+      <div class="creator-cord">
+        <div class="creator-card-title">Supporter</div>
+        <div style="display: flex; gap: 5em;">
+          <img alt="icon" class="creator-card-icon" src="../img/yuu_icon.jpg"/>
+          <div>
+            <div class="creator-card-name">ゆう</div>
+            <div class="creator-comment-title">ひよっこ開発者</div>
+            <div class="creator-comment">今ご覧になられております、Web Pageを製作させて頂きました。</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
 </template>
 
 <style scoped>
