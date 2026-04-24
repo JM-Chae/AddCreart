@@ -10,7 +10,7 @@ const open = ref(false)
     <a href="#ABOUT" class="content-btn">ABOUT</a>
     <a href="#SERVICE" class="content-btn">SERVICE</a>
     <a href="#CREATOR" class="content-btn">CREATOR</a>
-    <a href="#" class="content-btn">PLAN</a>
+    <a href="#PLAN" class="content-btn">PLAN</a>
     <a title="Xへ飛ぶ" href="https://x.com/addcreart_info" target='_blank' class="content-btn">CONTACT ▶</a>
   </nav>
 </template>

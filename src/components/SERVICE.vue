@@ -27,7 +27,7 @@
           Movie Creative
         </div>
         <div class="card-content">
-          オリジナル楽曲MV、歌ってみたMV、Short動画
+          オリジナル楽曲MV、<br/>歌ってみたMV、Short動画
         </div>
       </div>
       <div class="card">
@@ -38,7 +38,7 @@
           Visual Creative
         </div>
         <div class="card-content">
-          ロゴデザイン、立ち絵、パーツ分けイラスト、イラスト
+          ロゴデザイン、立ち絵、<br/>パーツ分けイラスト、<br/>イラスト
         </div>
       </div>
     </div>

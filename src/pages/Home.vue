@@ -4,6 +4,7 @@ import TopMenu from "@/components/TopMenu.vue";
 import ABOUT from "@/components/ABOUT.vue";
 import SERVICE from "@/components/SERVICE.vue";
 import CREATOR from "@/components/CREATOR.vue";
+import PLAN from "@/components/PLAN.vue";
 </script>
 
 <template>
@@ -23,7 +24,7 @@ import CREATOR from "@/components/CREATOR.vue";
       </div>
       <div class="phrase-content">
         あなたの作品・あなたの声・あなたの世界観。<br>
-        AddCreart は、そのすべてに “もうひとつの価値” を加えるための、クリエイティブ・パートナーです。
+        AddCreart は、そのすべてに “もうひとつの価値” を加えるための、<br/>クリエイティブ・パートナーです。
       </div>
     </div>
   </section>
@@ -41,6 +42,11 @@ import CREATOR from "@/components/CREATOR.vue";
   <section class="creator">
     <div class="section-bg"/>
   <CREATOR id="CREATOR"/>
+  </section>
+
+  <section class="creator">
+    <div class="section-bg"/>
+    <PLAN id="PLAN"/>
   </section>
 </template>
 

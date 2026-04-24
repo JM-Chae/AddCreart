@@ -1,4 +1,5 @@
 @import './base.css';
+@import './popup.css';
 
 #app {
   max-width: 768px;

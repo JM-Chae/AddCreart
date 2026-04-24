@@ -97,7 +97,7 @@ body {
 }
 .phrase {
   margin-bottom: 1em;
-  font-size: 2.5em;
+  font-size: 3em;
 }
 .phrase-content {
   font-size: 1.5em;
@@ -149,12 +149,28 @@ body {
 .card-content {
   font-size: 1em;
 }
-
+.creator-card {
+  color: #00de64;
+  border: #3c3c3c solid 5px;
+  border-radius: 2em;
+  min-width: 400px;
+  width: 50vw;
+  min-height: 500px;
+  height: 80vh;
+  padding: 4em;
+  background: rgba(0, 0, 0, 0.47);
+  overflow: hidden;
+}
+.creator-card-info {
+  display: flex;
+  gap: 4em;
+}
 .creator-card-title {
-  font-size: 1.5em;
-  margin-bottom: 1em;
+  font-size: 1.3em;
+  font-weight: lighter;
 }
 .creator-card-icon {
+  border: #eaeaea solid 2px;
   width: 100px;
   height: 100px;
   align-self: center;
@@ -162,7 +178,7 @@ body {
 }
 .creator-card-name {
   margin-bottom: 0.5em;
-  font-size: 1.3em;
+  font-size: 1.5em;
   align-content: center;
 }
 .creator-works-title {
@@ -171,17 +187,66 @@ body {
   text-align: center;
 }
 .creator-works-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1em;
+  display: flex;
+  gap: 1.5em;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  overflow-x: auto;
 }
+.works-slide {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.creator-works-container::-webkit-scrollbar {
+  display: none;
+}
+.slide-btn {
+  background: rgba(0, 222, 100, 0.2);
+  border: 1px solid #00de64;
+  color: #00de64;
+  cursor: pointer;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 5px;
+  font-size: 1.5em;
+  border-radius: 40%;
+  z-index: 10;
+  transition: 0.3s;
+}
+.slide-btn:hover {
+  background: #00de64;
+  color: #000;
+}
+
+.slide-btn.left { margin-right: 10px; }
+.slide-btn.right { margin-left: 10px; }
 .work {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 16 / 9;
+  border-radius: 1em;
+}
+.work.img {
+  width: 100%;
+  height: 100%; /* 부모 컨테이너 높이에 맞춤 */
+
+  /* 핵심: 이미지 비율을 유지하며 컨테이너 안에 다 들어가게 함 */
+  /* 남는 공간은 배경색이 보이거나 빈 공간으로 남음 */
+  object-fit: contain;
+
+  /* 비율이 다른 이미지들이 나열될 때 배경색을 주면 깔끔합니다 (선택) */
+  background-color: rgba(0, 0, 0, 0.64);
+
+  border-radius: 1em;
+  transition: transform 0.3s;
+}
+.work-title {
+  font-size: 1.3em;
 }
 .work-container {
-  cursor:pointer;
+  flex: 0 0 80%;
+  scroll-snap-align: center;
 }
 .creator-comment-container {
   width: 100%;
@@ -200,16 +265,22 @@ body {
 }
 
 @media (max-width: 768px) {
-  .container-card {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  .creator-card {
+    padding: 2em;
   }
 
   .creator-works-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0.5em;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1em;
+  }
+
+  .work-container {
+    flex: 0 0 90%;
+  }
+
+  .slide-btn {
+    padding: 8px 12px;
+    font-size: 1.2em;
   }
 }
