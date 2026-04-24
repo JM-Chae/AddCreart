@@ -68,6 +68,8 @@ body {
       background-color 0.5s;
   line-height: 1.6;
   font-family:
+  'Meiryo',
+  'Meiryo UI',
       Inter,
       -apple-system,
       BlinkMacSystemFont,
@@ -96,11 +98,11 @@ body {
   left: 0;
 }
 .phrase {
+  font-size: 3cqw;
   margin-bottom: 1em;
-  font-size: 3em;
 }
 .phrase-content {
-  font-size: 1.5em;
+  font-size: 1.2cqw;
 }
 
 .top-menu {
@@ -150,6 +152,7 @@ body {
   font-size: 1em;
 }
 .creator-card {
+  position: relative;
   color: #00de64;
   border: #3c3c3c solid 5px;
   border-radius: 2em;
@@ -202,6 +205,25 @@ body {
 .creator-works-container::-webkit-scrollbar {
   display: none;
 }
+.close-btn {
+  color: #00de64;
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, 0);
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  top: 1em;
+  right: 1em;
+  font-size: 2em;
+  border-radius: 40%;
+  z-index: 10;
+  transition: 0.3s;
+}
+.close-btn:hover {
+  background: #00de64;
+  color: #000;
+}
 .slide-btn {
   background: rgba(0, 222, 100, 0.2);
   border: 1px solid #00de64;
@@ -229,15 +251,9 @@ body {
 }
 .work.img {
   width: 100%;
-  height: 100%; /* 부모 컨테이너 높이에 맞춤 */
-
-  /* 핵심: 이미지 비율을 유지하며 컨테이너 안에 다 들어가게 함 */
-  /* 남는 공간은 배경색이 보이거나 빈 공간으로 남음 */
+  height: 100%;
   object-fit: contain;
-
-  /* 비율이 다른 이미지들이 나열될 때 배경색을 주면 깔끔합니다 (선택) */
   background-color: rgba(0, 0, 0, 0.64);
-
   border-radius: 1em;
   transition: transform 0.3s;
 }
@@ -275,12 +291,31 @@ body {
     gap: 1em;
   }
 
+  .creator-card-info {
+    display: flex;
+    gap: 1em;
+  }
+
   .work-container {
-    flex: 0 0 90%;
+    flex: 0 0 80%;
   }
 
   .slide-btn {
-    padding: 8px 12px;
-    font-size: 1.2em;
+    position: absolute;
+    visibility: collapse;
+    width: 0;
+  }
+
+  .close-btn {
+    top: 1em;
+    right: 1em;
+    font-size: 1.5em;
+  }
+  .phrase {
+    font-size: 10cqw;
+    margin-bottom: 1em;
+  }
+  .phrase-content {
+    font-size: 4cqw;
   }
 }

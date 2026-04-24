@@ -24,7 +24,7 @@ import PLAN from "@/components/PLAN.vue";
       </div>
       <div class="phrase-content">
         あなたの作品・あなたの声・あなたの世界観。<br>
-        AddCreart は、そのすべてに “もうひとつの価値” を加えるための、<br/>クリエイティブ・パートナーです。
+        AddCreart は、そのすべてに “もうひとつの価値” を加えるための、クリエイティブ・パートナーです。
       </div>
     </div>
   </section>

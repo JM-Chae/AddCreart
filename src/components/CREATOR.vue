@@ -52,12 +52,10 @@ function closeCard() {
     }
   });
 }
-
-const scrollContainer = ref<HTMLElement | null>(null);
-
 function moveSlide(direction: number) {
-  if (scrollContainer.value) {
-    const container = scrollContainer.value;
+  const container = document.querySelector(`.creator-${showCard.value} .creator-works-container`) as HTMLElement;
+
+  if (container) {
     const itemWidth = container.offsetWidth * 0.8;
     const gap = 24;
 
@@ -70,8 +68,6 @@ function moveSlide(direction: number) {
 
 
 </script>
-
-
 <template>
   <div class="container">
     <div class="container-title">CREATOR</div>
@@ -89,6 +85,7 @@ function moveSlide(direction: number) {
         <!-- personal card -->
 
         <div class="creator-card">
+          <button @click="cardOpenHandler('no one')" class="close-btn">x</button>
           <div v-show="showCard==='music'" class="creator-music">
             <div class="creator-card-info">
               <img alt="icon" class="creator-card-icon" src="../img/tsubasa_icon.jpg"/>
@@ -159,7 +156,7 @@ function moveSlide(direction: number) {
           <div v-show="showCard==='movie'" class="creator-movie">
             <div style="display: flex; gap: 5em;">
               <div class="creator-card-info">
-                <img alt="icon" @click="cardOpenHandler('movie')" class="creator-card-icon" src="../img/yukimimochi_icon.jpg"/>
+                <img alt="icon" class="creator-card-icon" src="../img/yukimimochi_icon.jpg"/>
                 <div>
                   <div class="creator-card-title">Movie Engineer</div>
                   <div class="creator-card-name">ゆきみもっち</div>
@@ -214,11 +211,11 @@ function moveSlide(direction: number) {
               <button class="slide-btn right" style="padding-left: 20px" @click="moveSlide(1)">〉</button>
             </div>
           </div>
-          <div v-show="showCard==='illust'" class="creator-cord">
+          <div v-show="showCard==='illust'" class="creator-illust">
             <div style="display: flex; gap: 5em;">
               <div>
                 <div class="creator-card-info">
-                  <img alt="icon" @click="cardOpenHandler('illust')" class="creator-card-icon" src="../img/udon_icon.jpg"/>
+                  <img alt="icon" class="creator-card-icon" src="../img/udon_icon.jpg"/>
                   <div >
                     <div class="creator-card-title">Illustrator</div>
                     <div class="creator-card-name">枇杷うどん</div>
