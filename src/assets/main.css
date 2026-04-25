@@ -50,6 +50,20 @@ a,
   position: relative;
   top: 0;
 }
+.x-logo {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: currentColor;
+  vertical-align: middle;
+  border-radius: 1rem;
+  border: 1px solid #474747;
+}
+
+.x-link {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
 
 .menu-btn {
   background: none;
@@ -59,6 +73,13 @@ a,
 
 /* 모바일 */
 @media (max-width: 768px) {
+  #app {
+    max-width: none !important;
+    padding: 2rem !important; /* 좌우 패딩을 0으로 제거 */
+    width: 100% !important;
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+  }
+
   .menu-btn {
     display: block;
     position: absolute;
@@ -66,6 +87,7 @@ a,
     right: 12px;
     font-size: 1.25em;
     color: #00DE64;
+
   }
 
   .nav {
@@ -115,10 +137,10 @@ a,
   opacity: 0.5;
   background-color: #737373;
 }
-.about, .service, .creator{
+.about, .service, .creator, .contact, .flow, .plan{
   padding: 5em 0;
 }
-.about, .creator {
+.about, .creator, .flow {
   color: #002157;
 }
 .about>.section-bg {
@@ -127,9 +149,29 @@ a,
 .creator>.section-bg {
   background: #ffffff;
 }
+.flow>.section-bg {
+  background: #ffffff;
+}
 .creator-works>.section-bg {
+  background: #3c3c3c;
+}
+.plan>.section-bg {
+  background: #3c3c3c;
+}
+.contact>.section-bg {
   background: #3c3c3c;
 }
 section {
    position: relative;
  }
+
+input, textarea, select{
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 10em;
+}

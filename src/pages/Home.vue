@@ -5,6 +5,8 @@ import ABOUT from "@/components/ABOUT.vue";
 import SERVICE from "@/components/SERVICE.vue";
 import CREATOR from "@/components/CREATOR.vue";
 import PLAN from "@/components/PLAN.vue";
+import CONTACT from "@/components/CONTACT.vue";
+import FLOW from "@/components/FLOW.vue";
 </script>
 
 <template>
@@ -44,9 +46,19 @@ import PLAN from "@/components/PLAN.vue";
   <CREATOR id="CREATOR"/>
   </section>
 
-  <section class="creator">
+  <section class="plan">
     <div class="section-bg"/>
     <PLAN id="PLAN"/>
+  </section>
+
+  <section class="flow">
+    <div class="section-bg"/>
+    <FLOW id="FLOW"/>
+  </section>
+
+  <section class="contact">
+    <div class="section-bg"/>
+    <CONTACT id="CONTACT"/>
   </section>
 </template>
 
